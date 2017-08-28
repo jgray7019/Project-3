@@ -1,0 +1,209 @@
+@import "partials/setup";
+@import "partials/global";
+@import "partials/variables";
+@import "partials/mixins";
+
+body {
+	background: $background;
+	font-family: $mainFont;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: $grey;
+	transition: all 0.3;
+}
+
+header {
+	background: $yellow;
+	position: relative;
+}
+
+.hero__background {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+}
+
+.arrowIcon {
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	font-size: 8.0rem;
+	left:0;
+	right:0;
+	text-align: center;
+	color: $grey;
+	@include respond-to ('medium') {
+		font-size: 5.0rem;
+	}
+	i:hover {
+		text-shadow: 1px 1px 1px white; 
+	}
+}
+
+.hero__title {
+	font-family: $logo;
+	margin: 0;
+	text-align: center;
+	font-size: 10.0rem;
+	letter-spacing: .4rem;
+	@include respond-to('small') {
+		font-size: 7.0rem;
+	}
+}
+
+.hero__subtitle {
+	text-align: center;
+}
+
+// ******* SUBMIT PAGE SECTION
+
+.submitPage {
+	margin-top: 10.0rem;
+}
+
+// ******* THING GENERATOR SECTION
+
+.thingContainer {
+	margin: 0 auto;
+}
+
+.thingCategory, button.playNow{
+	border: none;
+	background: $pink;
+	text-transform: uppercase;
+	font-size: 2.0rem;
+	color: $grey;
+	border-radius: 20px;
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 0 1px 2px 0 $grey;
+		background: lighten($pink, 5%);
+	}
+}
+
+.thingCategory{
+	padding: 2.0rem 3.0rem;
+}
+
+.category{
+	font-size: 2.5rem;
+	padding: 2.0rem 0;
+	background: $blue;
+	padding: 8.0rem 0;
+	width: 75%;
+	margin: 2.0rem auto;
+	border: 4px double $grey;
+}
+
+.category p {
+	margin: 0 auto;
+}
+
+details {
+	border: none;
+	width: 70%;
+	margin: 0 auto;
+	overflow: hidden;
+	transition: all 0.3s;
+	&:hover {
+		color: lighten($grey, 40%);
+	}
+}
+
+details summary {
+	font-size: 2.5rem;
+	outline: none;
+}
+
+.submitAnswer {
+	font-size: 2.5rem;
+	input {
+		margin: 1.0rem 0;
+		color: $grey;
+		border: none;
+		font-weight: 300;
+		text-transform: capitalize;
+	}
+}
+
+
+input.submit {
+	display: block;
+	margin: 0 auto;
+	background: $blue;
+	margin-bottom: 1.5rem;
+	padding: 1.0rem 1.5rem;
+	border-radius: 10px;
+	text-transform: uppercase;
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 0 1px 2px 0 $grey;
+		background: lighten($blue, 5%);
+	}
+	&:active {
+		background: $yellow;
+	}
+}
+
+button.playNow {
+	padding: 1.0rem 1.5rem;
+	margin: 5.0rem 0;
+}
+
+// *****ANSWERS SECTION
+
+
+input.submitGuess {
+	border: none;
+	background: $yellow;
+	text-transform: uppercase;
+	font-size: 2.0rem;
+	color: $grey;
+	border-radius: 20px;
+	padding: 2.0rem 3.0rem;
+	margin: 2.5rem 0;
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 0 1px 2px 0 $grey;
+		background: lighten($yellow, 5%);
+	}
+}
+
+.matchLists {
+	display: flex;
+	justify-content: space-around;
+	text-align: left;
+	@include respond-to('medium') {
+		display: block;
+	}
+}
+
+.players, .answers {
+	font-size: 2.5rem;
+	padding-left: 30px;
+	// max-width: 50%;
+	label {
+		padding-left: 20px;
+		margin: 20px 0;
+	}
+	@include respond-to('medium') {
+		margin-bottom: 20px;
+		max-width: 100%;
+		text-overflow: none;
+	}
+}
+
+
+.mobileTitle {
+	display: none;
+	display: block;
+	color: $grey;
+	text-align: center;
+	text-decoration: underline $blue;
+	@include respond-to('medium') {
+		margin-left: -20px;
+	}
+}
+

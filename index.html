@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Stuff</title>
+	
+	<link rel="stylesheet" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Roboto:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+	
+	<script src="https://use.fontawesome.com/28d182e909.js"></script>
+</head>
+<body>
+	<header>
+		<div class="hero__background">
+			<h1 class="hero__title animated fadeInDown">Stuff!</h1>
+			<h2 class="hero__subtitle animated fadeInDown">You know you wanna play.</h2>
+		</div>
+		<div class="arrowIcon">
+			<i class="fa fa-angle-double-down" aria-hidden="true"></i>
+		</div>
+	</header>
+
+	<section class="submitPage wrapper">
+		
+		<div class="thingContainer">
+			<form action="" class='thingButton'>
+				<input class="thingCategory" type="submit" value='Generate the Stuff'>
+			</form>
+			<div class="category">
+				<!-- <p></p> --> <!-- Generates Dynamically from thingsArray -->
+			</div>
+		</div>
+
+		<div class="playerForms">
+			<details>
+				<summary>Player 1</summary>
+				<form class="submitAnswer animated fadeInDown" action="  " class=form1>
+					<input type="text" name="playerName" placeholder="Player One Name">
+					<input maxlength='50' type="password" name= "playerAnswer" placeholder="Enter your answer">
+					<input type="submit" class="submit" name="player1Submit" value="submit answer">
+				</form>
+			</details>
+
+			<details>
+				<summary>Player 2</summary>
+				<form class="submitAnswer animated fadeInDown" action="" class=form2>
+					<input type="text" name="playerName" placeholder="Player Two Name">
+					<input type="password" name= "playerAnswer" placeholder="Enter your answer">
+				<input type="submit" class="submit" value="submit answer">
+			    </form>
+		    </details>
+
+		    <details>
+				<summary>Player 3</summary>    
+		        <form class="submitAnswer animated fadeInDown" action="" class='form3'>
+		            <input type="text" name="playerName" placeholder="Player Three Name">
+		            <input type="password" name= "playerAnswer" placeholder="Enter your answer">
+		            <input type="submit" class="submit" value="submit answer">
+		        </form>
+	        </details>
+		    
+		    <details>
+				<summary>Player 4</summary>
+		        <form class="submitAnswer animated fadeInDown" action="" class='form4'>
+		            <input type="text" name="playerName" placeholder="Player Four Name">
+		            <input type="password" name= "playerAnswer" placeholder="Enter your answer">
+		            <input type="submit" class="submit" value="submit answer">
+		        </form>
+	        </details>
+
+	        <button class='playNow' type='submit'>Play Now!</button>
+        </div>
+	</section>
+		
+	<section class="matchPage wrapper">
+			<form class="guessForm" action="">
+        		<div class="matchLists" id="matchLists">
+        			<div class="players"></div>
+        			<div class="answers"></div>
+        		</div>
+        		<div class="submitGuessContainer">
+	     		<!-- submit button is dynamically generated -->
+        		</div>
+			</form>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
+	<script src="scripts/script.js"></script>
+</body>
+</html>
